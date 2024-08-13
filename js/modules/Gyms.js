@@ -3,6 +3,7 @@ import { displayCount } from "./count.js";
 import { academiesCards } from "./academiesCards.js";
 import { filterAcademy } from "./filterAcademy.js";
 import { filterGymsByTimeRange } from "./FilterGyms.js";
+import { searchAcademies } from "./searchAcademies.js";
 
 export const searchForGyms = async () => {
 
