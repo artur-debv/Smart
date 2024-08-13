@@ -3,8 +3,8 @@ import { displayCount } from "./count.js";
 import { academiesCards } from "./academiesCards.js";
 import { filterAcademy } from "./filterAcademy.js";
 
- export const searchAcademies = async (event) => {
-    event.preventDefault();
+ export const searchAcademies = async () => {
+   
     const academies = await fetchApi();
     const academiesFilter = filterAcademy(academies);
   
