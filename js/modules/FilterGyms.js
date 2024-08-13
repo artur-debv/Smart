@@ -20,7 +20,7 @@ export const filterGymsByTimeRange = (academys, start, end) => {
         }).filter(schedule => schedule !== null);
 
         return {
-            ...gym,
+            ...academy,
             schedules: filteredSchedules
         };
     });
