@@ -9,6 +9,5 @@ const ClearButton = document.querySelector(".clean");
 
 // Adicionando eventos de clique aos botões
 document.addEventListener("DOMContentLoaded", searchAcademies);
-document.addEventListener("DOMContentLoaded", searchForGyms);
-ButtonSearch.addEventListener("click", searchAcademies);
+ButtonSearch.addEventListener("click", searchForGyms);
 ClearButton.addEventListener("click", ClearOptions);
