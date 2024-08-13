@@ -1,10 +1,10 @@
-export const filterGymsByTimeRange = (gyms, startTime, endTime) => {
-    return gyms.filter(gym =>
-        gym.schedules.some(item => item.hour >= startTime && item.hour <= endTime)
-    ).map(gym => {
-        const filteredSchedules = gym.schedules.map(schedule => {
+export const filterGymsByTimeRange = (academys, start, end) => {
+    return academys.filter(academy =>
+        academy.schedules.some(item => item.hour >= startTime && item.hour <= endTime)
+    ).map(academy => {
+        const filteredSchedules = academy.schedules.map(schedule => {
 
-            if ((schedule.weekdays === 'Sáb.' || schedule.weekdays === 'Dom.') && (schedule.hour >= startTime && schedule.hour <= endTime)) {
+            if ((schedule.weekdays === 'Sáb.' || schedule.weekdays === 'Dom.') && (schedule.hour >= start && schedule.hour <= end)) {
                 return schedule;
             } 
 
@@ -12,7 +12,7 @@ export const filterGymsByTimeRange = (gyms, startTime, endTime) => {
                 return schedule
             }
 
-            if (schedule.weekdays === 'Seg. à Sex.' && schedule.hour >= startTime && schedule.hour <= endTime) {
+            if (schedule.weekdays === 'Seg. à Sex.' && schedule.hour >= start && schedule.hour <= end) {
                 return schedule;
             }
 
