@@ -1,6 +1,6 @@
 export const filterGymsByTimeRange = (academys, start, end) => {
     return academys.filter(academy =>
-        academy.schedules.some(item => item.hour >= startTime && item.hour <= endTime)
+        academy.schedules.some(item => item.hour >= start && item.hour <= end)
     ).map(academy => {
         const filteredSchedules = academy.schedules.map(schedule => {
 
